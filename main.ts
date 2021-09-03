@@ -1,6 +1,6 @@
 input.onButtonPressed(Button.A, function () {
-    if (note != 7) {
-        note = note + 1
+    if (note != 1) {
+        note = note - 1
         basic.showString("" + (note))
     }
 })
@@ -8,8 +8,8 @@ input.onSound(DetectedSound.Loud, function () {
     music.stopAllSounds()
 })
 input.onButtonPressed(Button.B, function () {
-    if (note != 1) {
-        note = note - 1
+    if (note != 7) {
+        note = note + 1
         basic.showString("" + (note))
     }
 })
