@@ -5,7 +5,7 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onSound(DetectedSound.Loud, function () {
-    music.stopAllSounds()
+	
 })
 input.onButtonPressed(Button.B, function () {
     if (note != 7) {
@@ -33,3 +33,8 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 let note = 0
 note = 1
 basic.showString("" + note + "do")
+basic.forever(function () {
+    if (input.soundLevel() > 120) {
+        music.stopAllSounds()
+    }
+})
